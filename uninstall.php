@@ -11,8 +11,3 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
  */
 delete_option('convert_settings_options');
 delete_option('crypto_convert_log');
-
-/**
- * Not delete plugin for testing die
- */
-die();
