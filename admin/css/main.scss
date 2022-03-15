@@ -1,0 +1,13 @@
+.ps-crypto-convert {
+  margin-top: 50px;
+  &__title{
+    color: red;
+  }
+
+  &__note {
+    color: red;
+  }
+  &__input{
+    min-width: 300px;
+  }
+}

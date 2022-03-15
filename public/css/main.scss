@@ -1,0 +1,278 @@
+@import "config/config";
+
+.ps-cc {
+  margin: 30px 15px;
+  font-size: 16px;
+  line-height: 1.2;
+
+  &__row {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__box {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .125);
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @include sm {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__form {
+    padding-bottom: 20px;
+    position: relative;
+
+    &:before {
+      transition: all 0.4s ease-in-out;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(#f7f7fa, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    &:after {
+      transition: all 0.4s ease-in-out;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include tXY;
+      width: 60px;
+      height: 64px;
+      background-size: cover;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 9999;
+    }
+
+    &_loading {
+
+      * {
+        pointer-events: none !important;
+      }
+
+      &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:after {
+        visibility: visible;
+        opacity: 1;
+        background: url("../img/loading.gif") no-repeat center center;
+      }
+    }
+
+    &-title {
+      background-color: rgba(0, 0, 0, .03);
+      padding: 20px;
+      font-weight: 500;
+      font-size: 26px;
+      margin: 0;
+      @include md {
+        font-size: 20px;
+        padding: 15px;
+      }
+      @include sm {
+        font-size: 16px;
+      }
+    }
+
+    &-item {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      @include md {
+        padding: 15px;
+      }
+      @include sm {
+        flex-direction: column;
+      }
+    }
+
+    &-input {
+      border: 1px solid rgba(0, 0, 0, .125);
+      outline: none !important;
+      border-radius: 5px;
+      height: 60px;
+      width: 100%;
+      max-width: 600px;
+      padding: 5px 5px 5px 40px;
+      font-size: 30px;
+      transition: all 0.4s;
+      @include md {
+        height: 40px;
+        font-size: 20px;
+      }
+
+      &_btc {
+        background: url("../img/bitcoin.svg") no-repeat left 5px center;
+        background-size: 30px;
+      }
+
+      &_etc {
+        background: url("../img/etc.svg") no-repeat left 5px center;
+        background-size: auto 30px;
+      }
+
+      &_disabled {
+        pointer-events: none !important;
+      }
+
+      &:focus {
+        border-color: orange;
+      }
+    }
+
+    &-arrow {
+      margin: 0 50px;
+      background: url("../img/right.svg") no-repeat center center;
+      background-size: 50px;
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      @include md {
+        margin: 0 20px;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+      }
+      @include sm {
+        transform: rotate(90deg);
+        margin: 5px 0;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+      }
+    }
+
+    &-btn {
+      margin-left: 20px;
+      box-shadow: none;
+      outline: none !important;
+      border: 1px solid orange;
+      background-color: orange;
+      border-radius: 5px;
+      font-size: 18px;
+      padding: 10px 20px;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #fff;
+      @include tr;
+      @include md {
+        margin-left: 15px;
+      }
+      @include sm {
+        font-size: 14px;
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(black, 0.4);
+      }
+    }
+  }
+
+  &__log {
+    @extend .ps-cc__box;
+    position: relative;
+
+    &:before {
+      transition: all 0.4s ease-in-out;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(#f7f7fa, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    &:after {
+      transition: all 0.4s ease-in-out;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include tXY;
+      width: 60px;
+      height: 64px;
+      background-size: cover;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 9999;
+    }
+
+    &_loading {
+      * {
+        pointer-events: none !important;
+      }
+
+      &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:after {
+        visibility: visible;
+        opacity: 1;
+        background: url("../img/loading.gif") no-repeat center center;
+      }
+    }
+
+    &-title {
+      @extend .ps-cc__form-title;
+    }
+
+    &-list {
+      padding: 20px;
+      list-style: none;
+      font-size: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+      align-items: start;
+      margin: 0;
+      counter-reset: navItem;
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        font-size: 16px;
+      }
+      @include sm {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      &:before {
+        counter-increment: navItem;
+        content: counter(navItem, decimal-leading-zero);
+        position: relative;
+        top: 0;
+        left: 0;
+        font-weight: 800;
+        color: orange;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.7px orange;
+        margin-right: 10px;
+      }
+    }
+  }
+
+}

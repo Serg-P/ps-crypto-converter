@@ -1,0 +1,99 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ps-crypto-converter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-15 15:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Сергей Патлань\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Loco-Version: 2.3.1; wp-5.3\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/ps-crypto-converter-admin.php:1
+msgid "Cryptocurrency converter BTC to ETC"
+msgstr ""
+
+#: class-crypto-converter.php:38
+msgid "Update ETC every 5 minutes"
+msgstr ""
+
+#: class-crypto-converter.php:113
+msgid "Cryptocurrency converter settings page"
+msgstr ""
+
+#: class-crypto-converter.php:114
+msgid "Crypto-converter"
+msgstr ""
+
+#: class-crypto-converter.php:135
+msgid "Settings"
+msgstr ""
+
+#: class-crypto-converter.php:149
+msgid "Store the history log of convert requests. Default 10"
+msgstr ""
+
+#: class-crypto-converter.php:150
+msgid "1 BTC ="
+msgstr ""
+
+#: class-crypto-converter.php:151
+msgid "API KEY"
+msgstr ""
+
+#: class-crypto-converter.php:156
+msgid "Since it's just a test version here everything is simple. Used free key api. In free mode available 333 requests per day. For updates ETC every 5 minutes WP CRON must be work"
+msgstr ""
+
+#: class-crypto-converter.php:159
+msgid "For display insert in your template this php code"
+msgstr ""
+
+#: class-crypto-converter.php:176
+msgid "ETC"
+msgstr ""
+
+#: class-crypto-converter.php:177
+msgid "If you want to change the course manually you can use the field. "
+msgstr ""
+
+#: class-crypto-converter.php:180
+msgid "NOTE !!!"
+msgstr ""
+
+#: class-crypto-converter.php:181
+msgid "The course is updated every 5min from api"
+msgstr ""
+
+#: class-crypto-converter.php:191
+msgid "If you don't have api key you may get it here"
+msgstr ""
+
+#: includes/crypto-converter-ajax.php:36 includes/crypto-converter-ajax.php:40
+msgid "to"
+msgstr ""
+
+#: public/ps-crypto-converter-public.php:18
+msgid "Convert BTC to ETC"
+msgstr ""
+
+#: public/ps-crypto-converter-public.php:26
+#: public/ps-crypto-converter-public.php:37
+msgid "Convert"
+msgstr ""
+
+#: public/ps-crypto-converter-public.php:30
+msgid "Convert ETC to BTC"
+msgstr ""
+
+#: public/ps-crypto-converter-public.php:42
+msgid "Last recently converted"
+msgstr ""

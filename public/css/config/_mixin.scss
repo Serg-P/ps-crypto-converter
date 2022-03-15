@@ -1,0 +1,53 @@
+@mixin placeholder($color: #333, $opacity: 1) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+}
+
+@mixin placeholder-content {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin tr($ms:0.4s) {
+  transition: all $ms ease-out;
+}
+
+@mixin trn() {
+  transition: none;
+}
+
+@mixin tX($arg:-50%) {
+  transform: translateX($arg);
+}
+
+@mixin tY($arg:-50%) {
+  transform: translateY($arg);
+}
+
+@mixin tXY($arg:-50%,$arg2:-50%) {
+  transform: translate($arg, $arg2);
+}
